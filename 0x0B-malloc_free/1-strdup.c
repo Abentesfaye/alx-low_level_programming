@@ -10,7 +10,7 @@
 char *_strdup(char *str)
 {
 	char *newstr;
-	int i;
+	long unsigned int i;
 	size_t length = strlen(str) + 1;
 
 	if (str == NULL)
