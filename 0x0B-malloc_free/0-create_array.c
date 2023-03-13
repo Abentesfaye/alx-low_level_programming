@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * create_array - function return pointer to allocated memory
  * @size : parametr for the size of memory to be allocat
@@ -9,6 +10,7 @@ char *create_array(unsigned int size, char c)
 {
 	char *str;
 	       str = malloc(size);
+	       *str = c;
 	return (str);
 }
 
