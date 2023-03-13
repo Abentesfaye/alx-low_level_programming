@@ -2,23 +2,21 @@
 #include <stdlib.h>
 #include "main.h"
 /*
- *_strdup -  copy the variable and allocat new memory
+ * _strdup - copy string.
  * @str : string that going to be copy
  * Return : pointer to the new stirng
  */
 char *_strdup(char *str)
 {
 	char *newstr;
-	int i;
-	int length = 0;
-
-	while (str[length] != '\0')
-		length++;
+	size_t lenght = strlen(str) + 1;
 
 	if (str == NULL)
 		return (NULL);
 
-	newstr = malloc(sizeof(str));
+	newstr = malloc(length);
+	if (newstr == NULL)
+		return (NULL);
 
 	for (i = 0; i < length; i++)
 	{
