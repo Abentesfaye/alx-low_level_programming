@@ -10,7 +10,7 @@
 char *_strdup(char *str)
 {
 	char *newstr;
-	long unsigned int i;
+
 	size_t length = strlen(str) + 1;
 
 	if (str == NULL)
@@ -20,9 +20,6 @@ char *_strdup(char *str)
 	if (newstr == NULL)
 		return (NULL);
 
-	for (i = 0; i < length; i++)
-	{
-		newstr[i] = str[i];
-	}
+	memcpy(newstr, str, length);
 	return (newstr);
 }
