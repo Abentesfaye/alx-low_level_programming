@@ -2,30 +2,29 @@
 #include <stdlib.h>
 #include <string.h>
 #include "main.h"
-/*
- * _strdup - copy string.
+/**
+ * _strdup -> copies a string
  * @str : string that going to be copy
- * Return : pointer to the new stirng
+ * Return: a string pointer and NULL if null
  */
 char *_strdup(char *str)
 {
-	char *newstr;
-
-	size_t length = strlen(str) + 1;
+	char *new_str;
+	int i = 1, j = 0;
 
 	if (str == NULL)
-	{
-		printf("failed to allocate memory\n");
-		return (NULL);
-	}
+		return (NULL)
 
-	newstr = malloc(length);
-	if (newstr == NULL)
-	{
-		printf("failed to allocate memory\n");
+	while (str[i] != '\0')
+		i++;
+	new_str = (char *)malloc(i * sizeof(char) + 1);
+	if (new_str == NULL)
 		return (NULL);
+	while (j < i)
+	{
+		new_str[j] = str[j];
+		j++;
 	}
-
-	memcpy(newstr, str, length);
-	return (newstr);
+	new_str[j] = '\0';
+	return (new_str);
 }
