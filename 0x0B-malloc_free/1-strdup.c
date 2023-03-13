@@ -18,8 +18,10 @@ char *_strdup(char *str)
 
 	newstr = malloc(length);
 	if (newstr == NULL)
+	{
 		printf("failed to allocate memory\n");
 		return (NULL);
+	}
 
 	memcpy(newstr, str, length);
 	return (newstr);
