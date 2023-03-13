@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdlib.h>
 /**
  * strncat_mod - concatenates string with n bytes from another string
  * @dest: destination string
