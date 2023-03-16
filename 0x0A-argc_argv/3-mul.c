@@ -6,17 +6,19 @@
  * @argv : argumet vector
  * Return: nothing
  */
-int main(int argc, char *argv[])
+int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	int x, y;
+
+	if (argc <= 2)
+	{
+		printf("%s\n", "Error");
+		return (1);
+	}
+
 	x = atoi(argv[1]);
 	y = atoi(argv[2]);
 
-	if (argc < 3 || argc > 3)
-	{
-	printf("error\n");
-	}
-	printf("%i\n", x * y);
+	printf("%d\n", x * y);
 	return (0);
 }
-
