@@ -7,11 +7,10 @@
  */
 int main(int argc, char *argv[] __attribute__((unused)))
 {
-	int i;
+	int counter;
 
-	for (i = 0; i < argc; i++)
-	{
-		printf("%i\n", i);
-	}
+	counter = argc - 1;
+
+	printf("%i\n", counter);
 	return (0);
 }
