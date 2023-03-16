@@ -1,15 +1,16 @@
 #include "main.h"
+#include <stdlib.h>
 /**
- * string_nconcat - concatenates two strings.
- * @s1: 1st string
- * @s2: 2nd string.
- * @n: size
- * Return: pointer to new string
- */
+ *string_nconcat - concatenates two strings.
+ *@s1: 1st string.
+ *@s2: 2nd string.
+ *@n: size of bytes.
+ *Return: pointer to the allocated memory 98 it if it fails.
+*/
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *sout;
-	unsigned int ls1, ls2, lsout, i;
+	char *ptr;
+	unsigned int lens1, lens2, lenPtr, i;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -17,29 +18,28 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	for (ls1 = 0; s1[ls1] != '\0'; ls1++)
+	for (lens1 = 0; s1[lens1] != '\0'; lens1++)
 		;
 
-	for (ls2 = 0; s2[ls2] != '\0'; ls2++)
+	for (lens2 = 0; s2[lens2] != '\0'; lens2++)
 		;
 
-	if (n > ls2)
-		n = ls2;
+	if (n > lens2)
+		n = lens2;
+	lenPtr = lens1 + n;
 
-	lsout = ls1 + n;
+	ptr = malloc(lenPtr + 1);
 
-	sout = mallo(lsout + 1);
-
-	if (sout == NULL)
+	if (ptr == NULL)
 		return (NULL);
 
-	for (i = 0; i < lsout; i++)
-		if (i < ls1)
-			sout[i] = s1[i];
+	for (i = 0; i < lenPtr; i++)
+		if (i < lens1)
+			ptr[i] = s1[i];
 		else
-			sout[i] = s2[i - ls1];
+			ptr[i] = s2[i - lens1];
 
-	sout[i] = '\0';
+	ptr[i] = '\0';
 
-	return (sout);
+	return (ptr);
 }
