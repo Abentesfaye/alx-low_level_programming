@@ -12,17 +12,16 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	int x, y;
 
-	if (argc <= 2)
+	if (argc == 3)
 	{
-		printf("%s\n", "Error");
-		return (1);
+		x = atoi(argv[1]);
+		y = atoi(argv[2]);
+
+		printf("%d\n", x * y);
 	}
-
-
-	x = atoi(argv[1]);
-	y = atoi(argv[2]);
-
-	printf("%d\n", x * y);
+	else{
+		printf("%s\n", "Error");
+	}
 
 	return (0);
 }
