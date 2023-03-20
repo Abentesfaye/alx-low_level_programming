@@ -1,1 +1,1 @@
-# dynamic memery with malloc`
+# dynamic is more fun than static
