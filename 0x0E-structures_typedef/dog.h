@@ -2,17 +2,22 @@
 #define _DOG_H_
 
 #include <stdio.h>
- /**
-  *struct dog - dog is a structure to stor name and owner
-  *@name: dog name
-  *@owner: dog owner
-  *@age:dog age
-  *Description: struct dog is new data type which store dog information
-  */
+#include <stdlib.h>
+
+/**
+ * struct dog - new dog data type
+ * @name: dog name
+ * @age: dog age
+ * @owner: owner of the dog
+ *
+ * Description: struct called "dog" that stores its name, its age
+ * and the name of its owner.
+ */
+
 struct dog
 {
 	char *name;
-	char *owner;
 	float age;
+	char *owner;
 };
 #endif
