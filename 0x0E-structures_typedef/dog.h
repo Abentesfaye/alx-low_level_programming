@@ -5,6 +5,10 @@
 #include <stdlib.h>
 
 /**
+ * dog_t - type def for dog
+ */
+typedef struct dog dog_t;
+/**
  * struct dog - new dog data type
  * @name: dog name
  * @age: dog age
