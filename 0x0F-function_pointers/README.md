@@ -1,1 +1,0 @@
-# function pointer in c
