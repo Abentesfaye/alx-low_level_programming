@@ -2,7 +2,7 @@
 /**
  *print_listint - print list off the node
  *@h:the value to be print
- *Retur0n:length of the list
+ *Return:length of the list
  */
 
 size_t print_listint(const listint_t *h)
